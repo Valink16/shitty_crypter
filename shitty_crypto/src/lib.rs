@@ -50,7 +50,7 @@ fn add_wraparound_u8(a: u8, b: isize) -> u8 {
     if r > MAX {
         return (r % MAX - 1) as u8;
     } else if r < MIN {
-        return (MAX - (r.abs() % MAX) + 1) as u8;
+        return (MAX - (r.abs() % MAX) - 1) as u8;
     }
     r as u8
 }
